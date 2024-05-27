@@ -160,14 +160,14 @@ body::-webkit-scrollbar {
     margin-left: 5px;
 }
 
-.picture {
+.swiper-slide {
     position: relative;
     display: flex;
     align-items: center; 
     width: 100%;
     margin-bottom: 60px;
 }
-.picture h2 {
+.swiper-slide h2 {
     position: absolute;
     font-size: 36px;
     background-color: rgba(255, 255, 255, 0.15);
@@ -179,7 +179,7 @@ body::-webkit-scrollbar {
     padding-right: 1026px;
     line-height: 43.2px;
 }
-.picture img {
+.swiper-slide img {
     width: 100%;
     height: auto;
 }

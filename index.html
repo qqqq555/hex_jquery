@@ -14,7 +14,7 @@
     <link href="img/favicon.ico" rel="apple-touch-icon" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/934c12ab23.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <header>
@@ -52,9 +52,16 @@
             </nav>
         </div>
     </header>
-    <div class="picture">
-        <h2>六角學院<br>讓您奠定良好的前端基礎</h2>
-        <img src="./img/header_background.jpg" alt="laptop with code on screen">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <h2>六角學院<br>讓您奠定良好的前端基礎</h2>
+                <img src="./img/header_background.jpg" alt="laptop with code on screen">
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
     </div>
     <div class="courses">
         <div class="course">
@@ -157,6 +164,22 @@
     </footer>
 
     <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/934c12ab23.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 5000,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
     <script src="./js/all.js"></script>
 </body>
 </html>
