@@ -4,4 +4,8 @@ $(document).ready(function(){
         $('.dropdown-open').slideToggle();
         $('.fa').toggleClass('fa-angle-down fa-angle-up');
     });
+    lightbox.option({
+        'resizeDuration': 500,
+        'wrapAround': true
+      })
 });

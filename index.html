@@ -15,6 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet"  href="./css/lightbox.min.css" />
 </head>
 <body>
     <header>
@@ -52,20 +53,31 @@
             </nav>
         </div>
     </header>
+    <!-- Swiper Container -->
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <h2>六角學院<br>讓您奠定良好的前端基礎</h2>
                 <img src="./img/header_background.jpg" alt="laptop with code on screen">
             </div>
+            <div class="swiper-slide">
+                <h2>六角學院<br>在線上帶你就業</h2>
+                <img src="./img/header_background2.jpg" alt="laptop with code on screen">
+            </div>
+            <div class="swiper-slide">
+                <h2>六角學院<br>帶你學到會的線上課程</h2>
+                <img src="./img/header_background3.jpg" alt="laptop with code on screen">
+            </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-scrollbar"></div>
+        <!-- Add navigation buttons -->
+        <div class="swiper-button-prev" style="color: #ffffff;"></div>
+        <div class="swiper-button-next" style="color: #ffffff;"></div>
     </div>
     <div class="courses">
         <div class="course">
-            <img src="./img/html.png" alt="HTML" class="html">
+            <a href="./img/big_html.png" data-lightbox="lightbox" data-title="Html 5基礎教學：主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。">
+                <img src="./img/html.png" alt="HTML" class="html">
+            </a>
             <h3>Html 5基礎教學</h3>
             <p>主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
         </div>
@@ -166,6 +178,8 @@
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/934c12ab23.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/lightbox.min.js"></script>
+    <script src="./js/all.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
             autoplay: {
@@ -175,11 +189,11 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            }
         });
     </script>
-    <script src="./js/all.js"></script>
 </body>
 </html>
