@@ -7,5 +7,18 @@ $(document).ready(function(){
     lightbox.option({
         'resizeDuration': 500,
         'wrapAround': true
-      })
+    });
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+            $('.go-to-top').fadeIn();
+        } else {
+            $('.go-to-top').fadeOut();
+        }
+    });
+    $('.go-to-top a').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000); 
+    });
 });

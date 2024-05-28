@@ -155,7 +155,7 @@ body::-webkit-scrollbar {
     align-items: center;
     padding: 5px;
 }
-.fa{
+.dropdown fa{
     
     margin-left: 5px;
 }
@@ -347,3 +347,19 @@ body::-webkit-scrollbar {
     background: linear-gradient(135deg, #00CC99, #00594C);
     border-color: #00CC99;
 }
+
+.go-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    background-color: #00CC99;
+    padding: 13px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+  }
+  .go-to-top:hover{
+    background-color: #00594C;
+  }
